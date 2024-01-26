@@ -7,14 +7,14 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const episode_id = process.argv[2];
-const url = 'https://swapi-api.hbtn.io/api/films/' + episode_id;
+const episodeId = process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/' + episodeId;
 
 request.get((url), (error, response, body) => {
   if (error) {
     console.error(error);
     return;
   }
-  const movie_object = JSON.parse(body);
-  console.log(movie_object['title']);
+  const movieObject = JSON.parse(body);
+  console.log(movieObject.title);
 });
