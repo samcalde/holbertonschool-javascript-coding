@@ -17,9 +17,9 @@ request.get((url), (error, response, body) => {
   const movies = (JSON.parse(body)).results;
   let appearances = 0;
   for (let i = 0; i < movies.length; i++) {
-    currentMovie = movies[i];
+    const currentMovie = movies[i];
     for (let j = 0; j < currentMovie.characters.length; j++) {
-      currentChar = currentMovie.characters[j];
+      const currentChar = currentMovie.characters[j];
       if (currentChar.includes("/18/")) {
         appearances++;
       }
