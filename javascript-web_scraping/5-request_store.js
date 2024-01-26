@@ -5,7 +5,7 @@ const fs = require('fs');
 
 if (process.argv.length < 4) {
   console.error('You must provide both the url and target file');
-  return;
+  process.exit(1);
 }
 
 const url = process.argv[2];

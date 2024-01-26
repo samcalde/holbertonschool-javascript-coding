@@ -4,7 +4,7 @@ const request = require('request');
 
 if (process.argv.length < 3) {
   console.error('No episode number provided.');
-  return;
+  process.exit(1);
 }
 
 const episode_id = process.argv[2];
