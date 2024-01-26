@@ -18,8 +18,11 @@ request.get((url), (error, response, body) => {
   let appearances = 0;
   for (let i = 0; i < movies.length; i++) {
     currentMovie = movies[i];
-    if (currentMovie.characters.includes("/18/")) {
-      appearances++;
+    for (let j = 0; j < currentMovie.characters.length; j++) {
+      currentChar = currentMovie.characters[j];
+      if (currentChar.includes("/18/")) {
+        appearances++;
+      }
     }
   }
   console.log(appearances);
