@@ -18,8 +18,8 @@ request.get((url), (error, response, body) => {
   const completedTasks = {};
   for (let i = 0; i < tasksResponse.length; i++) {
     const currentTask = tasksResponse[i];
-    if (currentTask['completed'] === true) {
-      const userId = currentTask['userId'];
+    if (currentTask.completed === true) {
+      const userId = currentTask.userId;
       if (completedTasks[userId] >= 0) {
         completedTasks[userId]++;
       } else {
