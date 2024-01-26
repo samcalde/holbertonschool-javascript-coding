@@ -14,11 +14,11 @@ request.get((url), (error, response, body) => {
     console.error(error);
     return;
   }
-  const movies = (JSON.parse(body))['results'];
+  const movies = (JSON.parse(body)).results;
   let appearances = 0;
   for (let i = 0; i < movies.length; i++) {
-    current_movie = movies[i];
-    if (current_movie['characters'].includes("https://swapi-api.hbtn.io/api/people/18/")) {
+    currentMovie = movies[i];
+    if (currentMovie.characters.includes("/18/")) {
       appearances++;
     }
   }
