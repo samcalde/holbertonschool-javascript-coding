@@ -20,7 +20,7 @@ request.get((url), (error, response, body) => {
     const currentMovie = movies[i];
     for (let j = 0; j < currentMovie.characters.length; j++) {
       const currentChar = currentMovie.characters[j];
-      if (currentChar.includes("/18/")) {
+      if (currentChar.includes('/18/')) {
         appearances++;
       }
     }
