@@ -15,11 +15,11 @@ request.get((url), (error, response, body) => {
     return;
   }
   const tasksResponse = JSON.parse(body);
-  let completedTasks = {}
+  const completedTasks = {};
   for (let i = 0; i < tasksResponse.length; i++) {
-    current_task = tasksResponse[i];
-    if (current_task['completed'] === true) {
-      const userId = current_task['userId'];
+    const currentTask = tasksResponse[i];
+    if (currentTask['completed'] === true) {
+      const userId = currentTask['userId'];
       if (completedTasks[userId] >= 0) {
         completedTasks[userId]++;
       } else {
