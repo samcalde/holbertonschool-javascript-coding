@@ -19,7 +19,6 @@ request.get((url), (error, response, body) => {
   fs.writeFile(path, body, 'utf-8', (err) => {
     if (err) {
       console.error(err);
-      return;
     }
   });
 });

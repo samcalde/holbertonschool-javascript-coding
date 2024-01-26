@@ -4,7 +4,7 @@ const request = require('request');
 
 if (process.argv.length < 3) {
   console.error('No url provided.');
-  return;
+  process.exit(1);
 }
 
 const url = process.argv[2];
